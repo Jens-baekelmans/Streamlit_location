@@ -120,28 +120,146 @@ custom_config = {
   "config": {
     "visState": {
       "filters": [],
-      "layers": [],
-      "interactionConfig": {}
+      "layers": [
+        {
+          "id": "gfqbe9h",
+          "type": "heatmap",
+          "config": {
+            "dataId": "ghj60d78",
+            "label": "point",
+            "color": [
+              255,
+              203,
+              153
+            ],
+            "highlightColor": [
+              252,
+              242,
+              26,
+              255
+            ],
+            "columns": {
+              "lat": "Latitude ",
+              "lng": "Longitude "
+            },
+            "isVisible": True,
+            "visConfig": {
+              "opacity": 0.8,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radius": 100
+            },
+            "hidden": False,
+            "textLabel": [
+              {
+                "field": None,
+                "color": [
+                  255,
+                  255,
+                  255
+                ],
+                "size": 18,
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor": "start",
+                "alignment": "center"
+              }
+            ]
+          },
+          "visualChannels": {
+            "weightField": None,
+            "weightScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "ghj60d78": [
+              {
+                "name": "Country",
+                "format": None
+              },
+              {
+                "name": "Office ",
+                "format": None
+              },
+              {
+                "name": "Address",
+                "format": None
+              },
+              {
+                "name": "Latitude ",
+                "format": None
+              },
+              {
+                "name": "Longitude ",
+                "format": None
+              }
+            ]
+          },
+          "compareMode": False,
+          "compareType": "absolute",
+          "enabled": True
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": False
+        },
+        "geocoder": {
+          "enabled": False
+        },
+        "coordinate": {
+          "enabled": False
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": [],
+      "animationConfig": {
+        "currentTime": None,
+        "speed": 1
+      }
     },
     "mapState": {
       "bearing": 0,
-      "dragRotate": True,
-      "latitude": 40.0,
-      "longitude": -30.0,
-      "isSplit": False,
-      "zoom": 2
+      "dragRotate": False,
+      "latitude": 42.6526,
+      "longitude": -33.67819,
+      "pitch": 0,
+      "zoom": 3,
+      "isSplit": False
     },
     "mapStyle": {
       "styleType": "dark",
       "topLayerGroups": {},
       "visibleLayerGroups": {
         "label": True,
-        "road": False,
-        "border": True,
-        "building": False,
+        "road": True,
+        "border": False,
+        "building": True,
         "water": True,
-        "land": True
-      }
+        "land": True,
+        "3d building": False
+      },
+      "threeDBuildingColor": [
+        9.665468314072013,
+        17.18305478057247,
+        31.1442867897876
+      ],
+      "mapStyles": {}
     }
   }
 }
@@ -149,6 +267,8 @@ custom_config = {
 map_1 = KeplerGl(height=500, config=custom_config)
 map_1.add_data(df, name='Collibra Locations')
 keplergl_static(map_1)
+
+
 
 
 
