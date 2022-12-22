@@ -20,7 +20,7 @@ p {
 </style>""", unsafe_allow_html=True)
 
 # header and subheader
-st.header('Guess the countries of all the Collibra offices with our guessing game!')
+st.header('Guess the countries of all the Collibra offices with our guessing game!!!!!')
 st.subheader('Collibra is located in six countries at the moment. Below you will find six text boxes where you can enter '
              'your guesses. Afterwards, you can show the correct countries on your map.')
 
@@ -122,10 +122,10 @@ custom_config = {
       "filters": [],
       "layers": [
         {
-          "id": "gfqbe9h",
+          "id": "1iirg9",
           "type": "heatmap",
           "config": {
-            "dataId": "ghj60d78",
+            "dataId": "yj996aeb",
             "label": "point",
             "color": [
               255,
@@ -188,7 +188,7 @@ custom_config = {
       "interactionConfig": {
         "tooltip": {
           "fieldsToShow": {
-            "ghj60d78": [
+            "yj996aeb": [
               {
                 "name": "Country",
                 "format": None
@@ -263,12 +263,13 @@ custom_config = {
     }
   }
 }
+#
+# map_1 = KeplerGl(height=500, data={'data_1': df}, config=custom_config)
+# # map_1.add_data(df, name='Collibra Locations')
+# keplergl_static(map_1)
 
-map_1 = KeplerGl(height=500, config=custom_config)
-map_1.add_data(df, name='Collibra Locations')
-keplergl_static(map_1)
 
-
+st.map(df)
 
 
 
