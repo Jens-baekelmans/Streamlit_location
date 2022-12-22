@@ -4,7 +4,7 @@ from keplergl import KeplerGl
 import pandas as pd
 
 # data ingestion
-df = pd.read_csv('https://raw.githubusercontent.com/Jens-baekelmans/Streamlit_location/main/Collibra_loc.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Jens-baekelmans/Streamlit_location/main/Locations_Collibra_final.csv')
 
 #styling
 st.markdown("""
